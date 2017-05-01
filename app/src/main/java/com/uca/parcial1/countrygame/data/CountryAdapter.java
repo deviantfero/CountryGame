@@ -3,7 +3,6 @@ package com.uca.parcial1.countrygame.data;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.os.Bundle;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
@@ -28,6 +27,8 @@ public class CountryAdapter extends ArrayAdapter<Country> {
         if(result == null) {
             LayoutInflater vi = LayoutInflater.from(this.getContext());
         }
+
+        return result;
     }
 
 }
