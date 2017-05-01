@@ -12,7 +12,7 @@ public class Country {
     private String language;
     private int kilometers;
 
-    Country(String n, String d, String f, String l, int km) {
+    public Country(String n, String d, String f, String l, int km) {
         this.name = n;
         this.description = d;
         this.flagRoute = f;
@@ -20,7 +20,7 @@ public class Country {
         this.kilometers = km;
     }
 
-    Country(String n, String d, String l, int km) {
+    public Country(String n, String d, String l, int km) {
         this.name = n;
         this.description = d;
         this.language = l;
