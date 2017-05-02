@@ -41,8 +41,10 @@ gradle/
 gradlew
 gradlew.bat
 local.properties
-app/build.gradle
-app/proguard-rules.pro
+app/src/build.gradle
+app/src/proguard-rules.pro
+build.gradle
+gradle.properties
 app/app.iml
 
 
