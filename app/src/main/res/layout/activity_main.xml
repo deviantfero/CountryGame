@@ -7,11 +7,11 @@
     android:padding="8dp"
     tools:context="com.uca.parcial1.countrygame.MainActivity">
 
-    <ListView
-        android:id="@+id/countryList"
+    <fragment
+        android:name="com.uca.parcial1.countrygame.ListFragment"
+        android:id="@+id/listFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp" />
+        android:layout_height="match_parent"/>
+
 
 </LinearLayout>

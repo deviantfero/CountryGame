@@ -8,14 +8,14 @@ public class Country {
 
     private String name;
     private String description;
-    private String flagRoute;
+    private int flagId;
     private String language;
     private int kilometers;
 
-    public Country(String n, String d, String f, String l, int km) {
+    public Country(String n, String d, int f, String l, int km) {
         this.name = n;
         this.description = d;
-        this.flagRoute = f;
+        this.flagId = f;
         this.language = l;
         this.kilometers = km;
     }
@@ -51,12 +51,12 @@ public class Country {
         this.description = description;
     }
 
-    public String getFlagRoute() {
-        return flagRoute;
+    public int getFlagId() {
+        return flagId;
     }
 
-    public void setFlagRoute(String flagRoute) {
-        this.flagRoute = flagRoute;
+    public void setFlagId(int flagId) {
+        this.flagId = flagId;
     }
 
     public String getLanguage() {
