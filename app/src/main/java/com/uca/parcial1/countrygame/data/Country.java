@@ -10,7 +10,7 @@ public class Country {
     private String description;
     private int flagId;
     private String language;
-    private int kilometers;
+    private double kilometers;
 
     public Country(String n, String d, int f, String l, int km) {
         this.name = n;
@@ -27,11 +27,11 @@ public class Country {
         this.kilometers = km;
     }
 
-    public int getKilometers() {
+    public double getKilometers() {
         return kilometers;
     }
 
-    public void setKilometers(int kilometers) {
+    public void setKilometers(double kilometers) {
         this.kilometers = kilometers;
     }
 

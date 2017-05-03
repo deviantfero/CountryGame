@@ -14,10 +14,10 @@ public class CountryRepo {
 
     protected CountryRepo() {
         this.data = new ArrayList<>();
-        this.data.add(new Country("El Salvador", "Bad Country", R.drawable.sv_flag, "Spanish", 123));
-        this.data.add(new Country("USA", "Bad Country", R.drawable.us_flag, "English", 123));
-        this.data.add(new Country("Rusia", "Bad Country", R.drawable.rs_flag, "Russian", 123));
-        this.data.add(new Country("Alemania", "Bad Country", R.drawable.de_flag, "German", 123));
+        this.data.add(new Country("El Salvador", "Bad Country", R.drawable.sv, "Spanish", 123));
+        this.data.add(new Country("USA", "Bad Country", R.drawable.us, "English", 123));
+        this.data.add(new Country("Rusia", "Bad Country", R.drawable.rs, "Russian", 123));
+        this.data.add(new Country("Alemania", "Bad Country", R.drawable.de, "German", 123));
     }
 
     public static CountryRepo getInstance() {
