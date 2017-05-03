@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.uca.parcial1.countrygame.data.Country;
 import com.uca.parcial1.countrygame.data.CountryAdapter;
+import com.uca.parcial1.countrygame.data.CountryRepo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,13 +42,10 @@ public class CountryFragment extends ListFragment {
         //populating listView with list content
         View v = inflater.inflate(R.layout.fragment_list, container, false);
 
-        this.countries.add(new Country("El Salvador", "Bad Country", R.drawable.sv_flag, "Spanish", 123));
-        this.countries.add(new Country("US AND A", "Bad Country", R.drawable.us_flag, "English", 123));
-        this.countries.add(new Country("RUSHIIA", "Bad Country", R.drawable.rs_flag, "Russian", 123));
-        this.countries.add(new Country("YERMANI", "Bad Country", R.drawable.de_flag, "German", 123));
+        CountryRepo countries = CountryRepo.getInstance();
 
         this.countryList = (ListView) v.findViewById(android.R.id.list);
-        this.adapter = new CountryAdapter(this.getActivity(), R.layout.list_element, countries);
+        this.adapter = new CountryAdapter(this.getActivity(), R.layout.list_element, countries.data);
         this.countryList.setAdapter(adapter);
 
         return v;
