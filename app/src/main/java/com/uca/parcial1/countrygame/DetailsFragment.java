@@ -15,6 +15,8 @@ import com.uca.parcial1.countrygame.data.Country;
 
 public class DetailsFragment extends Fragment {
 
+    final static String POSITION = "position";
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstaceState) {
 
         //the activity that contains this fragment
@@ -23,5 +25,9 @@ public class DetailsFragment extends Fragment {
         //populating listView with list content
         View v = inflater.inflate(R.layout.fragment_detail, container, false);
         return v;
+    }
+
+    public int setFocus(int position) {
+        return position;
     }
 }

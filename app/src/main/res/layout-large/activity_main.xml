@@ -8,4 +8,18 @@
     android:orientation="horizontal"
     android:padding="8dp"
     tools:context="com.uca.parcial1.countrygame.MainActivity">
+    <fragment
+        android:id="@+id/countryListFragment"
+        android:name="com.uca.parcial1.countrygame.CountryFragment"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.uca.parcial1.countrygame.DetailsFragment"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
+
 </LinearLayout>
