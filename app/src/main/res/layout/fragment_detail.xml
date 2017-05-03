@@ -3,4 +3,33 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_weight="1"
+        android:id="@+id/detailFlag"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/detailName"
+        android:text="@string/question1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/detailDescription"
+        android:text="@string/question1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/detailLanguage"
+        android:text="@string/question1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/detailSize"
+        android:text="@string/question1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
 </LinearLayout>

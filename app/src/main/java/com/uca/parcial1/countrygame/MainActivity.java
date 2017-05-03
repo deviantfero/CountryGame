@@ -1,6 +1,7 @@
 package com.uca.parcial1.countrygame;
 
 import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
@@ -19,6 +20,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if(this.findViewById(R.id.countryFrameContainer) != null) {
+            if(savedInstanceState != null)
+                return;
 
+            ListFragment countryListFragment = new ListFragment();
+            //countryListFragment.setArguments(this.getIntent().getExtras());
+            this.getSupportFragmentManager().beginTransaction()
+                    .add(R.id.countryFrameContainer, countryListFragment).commit();
+        }
     }
 }
