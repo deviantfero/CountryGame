@@ -1,20 +1,17 @@
 package com.uca.parcial1.countrygame;
 
-import android.media.Image;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.uca.parcial1.countrygame.data.Country;
 import com.uca.parcial1.countrygame.data.CountryRepo;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
 
@@ -40,9 +37,55 @@ public class GameActivity extends AppCompatActivity {
         startGame();
     }
 
+    private void startGame(){
+        for (int i = 0; i < 10; i++){
+            questionCountries.remove((int)Math.random() * (questionCountries.size() + 1));
+        }
+
+        Collections.shuffle(questionCountries);
+        this.setCorrAnswer((int) Math.random() * 4);
+        generateQuestionLayout();
+    }
+
+    public void answerSelected(View view){
+        switch (getCorrAnswer()){
+            case 0:
+                if (view.getId() == R.id.firstAnsRadioButton)
+                    setCont(getCont() + 1);
+                break;
+
+            case 1:
+                if (view.getId() == R.id.secondAnsRadioButton)
+                    setCont(getCont() + 1);
+                break;
+
+            case 2:
+                if (view.getId() == R.id.thirdAnsRadioButton)
+                    setCont(getCont() + 1);
+                break;
+
+            case 3:
+                if (view.getId() == R.id.fourthAnsRadioButton)
+                    setCont(getCont() + 1);
+                break;
+        }
+
+        this.setCorrAnswer((int)Math.random()*4);
+
+        if (questionCountries.size() > 0){
+            generateQuestionLayout();
+        }else{
+            Intent intent = new Intent(this, ScoreActivity.class);
+            intent.putExtra("score", this.getCont() + "");
+            startActivity(intent);
+        }
+    }
+
     private void generateQuestionLayout(){
         ArrayList<Country> auxiliarCountries = (ArrayList<Country>)countries.clone();
+        auxiliarCountries.remove(questionCountries.get(0));
 
+        System.out.println(auxiliarCountries.size());
         flag.setImageResource(questionCountries.get(0).getFlagId());
 
         int aux;
@@ -63,6 +106,7 @@ public class GameActivity extends AppCompatActivity {
                 aux = (int)Math.random() * (auxiliarCountries.size() + 1);
                 ans4.setText(auxiliarCountries.get(aux).getName());
                 auxiliarCountries.remove(auxiliarCountries.get(aux));
+
                 break;
 
             case 1:
@@ -119,49 +163,8 @@ public class GameActivity extends AppCompatActivity {
                 auxiliarCountries.remove(auxiliarCountries.get(aux));
                 break;
         }
-    }
-
-    private void startGame(){
-        ArrayList<Country> auxiliarCountries = (ArrayList<Country>)countries.clone();
-
-        for (int i = 0; i < 10; i++){
-            questionCountries.remove((int)Math.random() * (questionCountries.size() + 1));
-        }
-
-        Collections.shuffle(questionCountries);
-        setCorrAnswer((int)Math.random()*4);
-        generateQuestionLayout();
-    }
-
-    public void answerSelected(View view){
-        switch (getCorrAnswer()){
-            case 0:
-                if (view.getId() == R.id.firstAnsRadioButton)
-                    setCont(getCont() + 1);
-                break;
-
-            case 1:
-                if (view.getId() == R.id.secondAnsRadioButton)
-                    setCont(getCont() + 1);
-                break;
-
-            case 2:
-                if (view.getId() == R.id.thirdAnsRadioButton)
-                    setCont(getCont() + 1);
-                break;
-
-            case 3:
-                if (view.getId() == R.id.fourthAnsRadioButton)
-                    setCont(getCont() + 1);
-                break;
-        }
-
-        System.out.println(getCont());
 
         questionCountries.remove(0);
-        if (questionCountries.size() > 0){
-            generateQuestionLayout();
-        }
     }
 
     public int getCont() {
