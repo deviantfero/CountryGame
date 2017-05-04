@@ -4,18 +4,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:padding="8dp"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.uca.parcial1.countrygame.MainActivity">
 
     <LinearLayout
         android:layout_weight="1"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:background="@color/learningColor"
         android:orientation="vertical"
         android:gravity="center_vertical|center_horizontal"
-        android:layout_height="0dp">
+        android:layout_height="match_parent">
         <Button
             android:id="@+id/buttonLearning"
             android:gravity="bottom|center_horizontal"
@@ -35,11 +35,11 @@
 
     <LinearLayout
         android:layout_weight="1"
-        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@color/playColor"
         android:gravity="center_vertical|center_horizontal"
-        android:layout_height="0dp">
+        android:layout_width="0dp">
         <Button
             android:id="@+id/buttonPlay"
             android:gravity="bottom|center_horizontal"
@@ -49,9 +49,9 @@
             android:textAlignment="gravity"
             android:onClick="setGame"/>
         <TextView
-            android:paddingTop="8dp"
             android:text="JUGAR"
             android:textStyle="bold"
+            android:paddingTop="8dp"
             android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

@@ -59,7 +59,7 @@ public class DetailsFragment extends Fragment {
         countryCapi.setText(selectedCountry.getCapital());
         countryDesc.setText(selectedCountry.getDescription());
         countryLang.setText(selectedCountry.getLanguage());
-        countrySize.setText("" + selectedCountry.getKilometers());
+        countrySize.setText(selectedCountry.getKilometers() + "Km^2");
         return position;
     }
 }
