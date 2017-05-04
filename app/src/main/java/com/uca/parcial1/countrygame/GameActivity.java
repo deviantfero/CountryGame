@@ -19,8 +19,11 @@ import java.util.Random;
 public class GameActivity extends AppCompatActivity {
 
     ArrayList<Country> countries = CountryRepo.getInstance().data;
+    ArrayList<Country> questionCountries;
     ImageView flag;
     Button ans1, ans2, ans3, ans4;
+    int corrAnswer;
+    int cont;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,32 +35,157 @@ public class GameActivity extends AppCompatActivity {
         ans3 = (Button)findViewById(R.id.thirdAnsRadioButton);
         ans4 = (Button)findViewById(R.id.fourthAnsRadioButton);
 
+        questionCountries = (ArrayList<Country>)countries.clone();
+
         startGame();
     }
 
+    private void generateQuestionLayout(){
+        ArrayList<Country> auxiliarCountries = (ArrayList<Country>)countries.clone();
+
+        flag.setImageResource(questionCountries.get(0).getFlagId());
+
+        int aux;
+        switch (getCorrAnswer()){
+            case 0:
+                ans1.setText(questionCountries.get(0).getName());
+                auxiliarCountries.remove(questionCountries.get(0));
+
+                aux = (int)Math.random() * (auxiliarCountries.size() + 1);
+                ans2.setText(auxiliarCountries.get(aux).getName());
+                auxiliarCountries.remove(auxiliarCountries.get(aux));
+
+
+                aux = (int)Math.random() * (auxiliarCountries.size() + 1);
+                ans3.setText(auxiliarCountries.get(aux).getName());
+                auxiliarCountries.remove(auxiliarCountries.get(aux));
+
+                aux = (int)Math.random() * (auxiliarCountries.size() + 1);
+                ans4.setText(auxiliarCountries.get(aux).getName());
+                auxiliarCountries.remove(auxiliarCountries.get(aux));
+                break;
+
+            case 1:
+                ans2.setText(questionCountries.get(0).getName());
+                auxiliarCountries.remove(questionCountries.get(0));
+
+                aux = (int)Math.random() * (auxiliarCountries.size() + 1);
+                ans1.setText(auxiliarCountries.get(aux).getName());
+                auxiliarCountries.remove(auxiliarCountries.get(aux));
+
+
+                aux = (int)Math.random() * (auxiliarCountries.size() + 1);
+                ans3.setText(auxiliarCountries.get(aux).getName());
+                auxiliarCountries.remove(auxiliarCountries.get(aux));
+
+                aux = (int)Math.random() * (auxiliarCountries.size() + 1);
+                ans4.setText(auxiliarCountries.get(aux).getName());
+                auxiliarCountries.remove(auxiliarCountries.get(aux));
+                break;
+
+            case 2:
+                ans3.setText(questionCountries.get(0).getName());
+                auxiliarCountries.remove(questionCountries.get(0));
+
+                aux = (int)Math.random() * (auxiliarCountries.size() + 1);
+                ans2.setText(auxiliarCountries.get(aux).getName());
+                auxiliarCountries.remove(auxiliarCountries.get(aux));
+
+
+                aux = (int)Math.random() * (auxiliarCountries.size() + 1);
+                ans1.setText(auxiliarCountries.get(aux).getName());
+                auxiliarCountries.remove(auxiliarCountries.get(aux));
+
+                aux = (int)Math.random() * (auxiliarCountries.size() + 1);
+                ans4.setText(auxiliarCountries.get(aux).getName());
+                auxiliarCountries.remove(auxiliarCountries.get(aux));
+                break;
+
+            case 3:
+                ans4.setText(questionCountries.get(0).getName());
+                auxiliarCountries.remove(questionCountries.get(0));
+
+                aux = (int)Math.random() * (auxiliarCountries.size() + 1);
+                ans2.setText(auxiliarCountries.get(aux).getName());
+                auxiliarCountries.remove(auxiliarCountries.get(aux));
+
+
+                aux = (int)Math.random() * (auxiliarCountries.size() + 1);
+                ans3.setText(auxiliarCountries.get(aux).getName());
+                auxiliarCountries.remove(auxiliarCountries.get(aux));
+
+                aux = (int)Math.random() * (auxiliarCountries.size() + 1);
+                ans1.setText(auxiliarCountries.get(aux).getName());
+                auxiliarCountries.remove(auxiliarCountries.get(aux));
+                break;
+        }
+    }
+
     private void startGame(){
-        ArrayList<Country> questionCountries = (ArrayList<Country>)countries.clone();
+        ArrayList<Country> auxiliarCountries = (ArrayList<Country>)countries.clone();
 
         for (int i = 0; i < 10; i++){
             questionCountries.remove((int)Math.random() * (questionCountries.size() + 1));
         }
 
         Collections.shuffle(questionCountries);
-        flag.setImageResource(questionCountries.get(0).getFlagId());
-
+        setCorrAnswer((int)Math.random()*4);
+        generateQuestionLayout();
     }
 
     public void answerSelected(View view){
-        Integer aciertos = 0;
-        ImageView flag = (ImageView)findViewById(R.id.questionFlagImageView);
-        Button ans1, ans2, ans3, ans4;
+        switch (getCorrAnswer()){
+            case 0:
+                if (view.getId() == R.id.firstAnsRadioButton)
+                    setCont(getCont() + 1);
+                break;
 
-        ans1 = (Button)findViewById(R.id.firstAnsRadioButton);
-        ans2 = (Button)findViewById(R.id.secondAnsRadioButton);
-        ans3 = (Button)findViewById(R.id.thirdAnsRadioButton);
-        ans4 = (Button)findViewById(R.id.fourthAnsRadioButton);
+            case 1:
+                if (view.getId() == R.id.secondAnsRadioButton)
+                    setCont(getCont() + 1);
+                break;
 
-        flag.setImageResource(R.drawable.ca);
-        ans1.setText(countries.get(1).getName());
+            case 2:
+                if (view.getId() == R.id.thirdAnsRadioButton)
+                    setCont(getCont() + 1);
+                break;
+
+            case 3:
+                if (view.getId() == R.id.fourthAnsRadioButton)
+                    setCont(getCont() + 1);
+                break;
+        }
+
+        System.out.println(getCont());
+
+        questionCountries.remove(0);
+        if (questionCountries.size() > 0){
+            generateQuestionLayout();
+        }
+    }
+
+    public int getCont() {
+        return cont;
+    }
+
+    public void setCont(int cont) {
+        this.cont = cont;
+    }
+
+
+    public int getCorrAnswer() {
+        return corrAnswer;
+    }
+
+    public void setCorrAnswer(int corrAnswer) {
+        this.corrAnswer = corrAnswer;
+    }
+
+    public ArrayList<Country> getQuestionCountries() {
+        return questionCountries;
+    }
+
+    public void setQuestionCountries(ArrayList<Country> questionCountries) {
+        this.questionCountries = questionCountries;
     }
 }
