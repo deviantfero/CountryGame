@@ -47,6 +47,7 @@ public class CountryFragment extends ListFragment {
         this.countryList = (ListView) v.findViewById(android.R.id.list);
         this.adapter = new CountryAdapter(this.getActivity(), R.layout.list_element, countries.data);
         this.countryList.setAdapter(adapter);
+        this.getActivity().setTitle(R.string.title_activity_learn);
 
         return v;
     }

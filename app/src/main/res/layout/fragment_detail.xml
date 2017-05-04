@@ -1,35 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:layout_weight="1"
-        android:id="@+id/detailFlag"
-        android:layout_width="match_parent"
-        android:layout_height="0dp" />
-    <TextView
-        android:layout_weight="1"
-        android:id="@+id/detailName"
-        android:text="@string/question1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp" />
-    <TextView
-        android:layout_weight="1"
-        android:id="@+id/detailDescription"
-        android:text="@string/question1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp" />
-    <TextView
-        android:layout_weight="1"
-        android:id="@+id/detailLanguage"
-        android:text="@string/question1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp" />
-    <TextView
-        android:layout_weight="1"
-        android:id="@+id/detailSize"
-        android:text="@string/question1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp" />
-</LinearLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:padding="8dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_weight="2"
+            android:paddingBottom ="8dp"
+            android:id="@+id/detailFlag"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <TextView
+            android:text="Descripción:"
+            android:paddingBottom ="8dp"
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/detailDescription"
+            android:paddingBottom="16dp"
+            android:text="@string/question1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <TextView
+            android:text="Idioma:"
+            android:paddingBottom ="8dp"
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/detailLanguage"
+            android:paddingBottom="16dp"
+            android:text="@string/question1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <TextView
+            android:text="Kilometros:"
+            android:paddingBottom ="8dp"
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/detailSize"
+            android:text="@string/question1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+    </LinearLayout>
+</ScrollView>
