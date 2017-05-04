@@ -19,7 +19,9 @@
         <activity
             android:name=".GameActivity"
             android:label="@string/title_activity_game"/>
-        <activity android:name=".LearnActivty">
+        <activity
+            android:label="@string/title_activity_learn"
+            android:name=".LearnActivty">
         </activity>
     </application>
 
