@@ -48,14 +48,13 @@ public class DetailsFragment extends Fragment {
         CountryRepo repo = CountryRepo.getInstance();
         Country selectedCountry = repo.data.get(position);
 
+        this.getActivity().setTitle(selectedCountry.getName());
         ImageView countryFlag = (ImageView) this.getActivity().findViewById(R.id.detailFlag);
-        TextView countryName = (TextView) this.getActivity().findViewById(R.id.detailName);
         TextView countryDesc = (TextView) this.getActivity().findViewById(R.id.detailDescription);
         TextView countryLang = (TextView) this.getActivity().findViewById(R.id.detailLanguage);
         TextView countrySize = (TextView) this.getActivity().findViewById(R.id.detailSize);
 
         countryFlag.setImageResource(selectedCountry.getFlagId());
-        countryName.setText(selectedCountry.getName());
         countryDesc.setText(selectedCountry.getDescription());
         countryLang.setText(selectedCountry.getLanguage());
         countrySize.setText("" + selectedCountry.getKilometers());
