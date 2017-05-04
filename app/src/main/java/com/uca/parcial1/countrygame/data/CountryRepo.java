@@ -67,11 +67,53 @@ public class CountryRepo {
                 "Unión Europea, constituido como un estado de derecho democrático. Es un país transcontinental, su territorio, " +
                 "con capital en Lisboa, está situado en el suroeste de Europa, en la península ibérica. Limita al este y al norte con " +
                 "España, y al sur y oeste con el océano Atlántico. Comprende también los archipiélagos autónomos de las Azores y Madeira " +
-                "situados en el hemisferio norte del océano Atlántico.", R.drawable.de, "Portugues", 92090, "Lisboa"));
-        this.data.add(new Country("Japón","Bad Country", R.drawable.de, "Japones", 357022, "Capital"));
-        this.data.add(new Country("Japón","Bad Country", R.drawable.de, "Japones", 357022, "Capital"));
-        this.data.add(new Country("Japón","Bad Country", R.drawable.de, "Japones", 357022, "Capital"));
-        this.data.add(new Country("Japón","Bad Country", R.drawable.de, "Japones", 357022, "Capital"));
+                "situados en el hemisferio norte del océano Atlántico.", R.drawable.pt, "Portugues", 92090, "Lisboa"));
+        this.data.add(new Country("Indía","La India oficialmente República de la India  es un país ubicado en el sur de " +
+                "Asia. Con sus más de 1240 millones de habitantes, es el segundo país del mundo por población después de " +
+                "la República Popular China (con 1370 millones) y la democracia más populosa del mundo. Su superficie es de " +
+                "3 287 263 km²,3 lo cual lo ubica en el séptimo lugar entre los países más extensos del planeta. Limita con " +
+                "el océano Índico al sur, con el mar Arábigo al oeste y con el golfo de Bengala al este, a lo largo de una " +
+                "línea costera de más de 7517 kilómetros.", R.drawable.in, "Hindú", 3287263, "Nueva Dehli"));
+        this.data.add(new Country("Argentina","La República Argentina, conocida simplemente como Argentina,es un país " +
+                "soberano de América del Sur, ubicado en el extremo sur y sudeste de dicho subcontinente. Adopta la forma " +
+                "de gobierno republicana, representativay federal. El Estado argentino es un Estado federal descentralizado, " +
+                "integrado por un Estado nacional y veintitrés estados provinciales autónomos que constituyen la federación, " +
+                "que jurídicamente son preexistentes y que se reservan todos los poderes no delegados.", R.drawable.ar, "Español", 2780400, "Buenos Aires"));
+        this.data.add(new Country("Chile","Chile se describe constituido por tres zonas geográficas. La primera de ellas, Chile " +
+                "continental, comprende una franja en la costa occidental del Cono Sur que se extiende entre los paralelos 17°" +
+                "29'57\" S y 56°32'12\" S, mayormente desde la ribera sudoriental del océano Pacífico hasta las cumbres más altas " +
+                "de la cordillera de los Andes. Alcanza un largo de 4270 km, un ancho máximo de 445 km en los 52°21' S, en la Región " +
+                "de Magallanes y Antártica Chilena, y un ancho mínimo de 90 km en los 31°37' S, en la Región de Coquimbo", R.drawable.cl, "Español", 756102.4, "Santiago"));
+        this.data.add(new Country("Colombia","Colombia, oficialmente República de Colombia, es un país soberano situado en la región noroccidental de " +
+                "América del Sur. Está constituido en un estado unitario, social y democrático de derecho cuya forma de gobierno es presidencialista. Esta " +
+                "república está organizada políticamente en 32 departamentos descentralizados y el Distrito capital de Bogotá, sede del " +
+                "gobierno nacional.", R.drawable.co, "Español", 357022, "Bolivia"));
+        this.data.add(new Country("España","España, también denominado Reino de España, es un país soberano, miembro de la Unión Europea, " +
+                "constituido en Estado social y democrático de derecho y cuya forma de gobierno es la monarquía parlamentaria. Su territorio, " +
+                "con capital en Madrid, está organizado en diecisiete comunidades autónomas y dos ciudades autónomas, formadas estas, a su vez, " +
+                "por cincuenta provincias.", R.drawable.es, "Español", 505370, "Madrid"));
+        this.data.add(new Country("Suecia","Suecia, oficialmente Reino de Suecia, es un país escandinavo de Europa del Norte que forma parte de " +
+                "la Unión Europea (UE). Limita al norte con Noruega y Finlandia, al este con Finlandia y el golfo de Botnia, al sur con el mar Báltico " +
+                "y al oeste con el mar del Norte y Noruega. Tiene fronteras terrestres con Noruega y Finlandia, y está conectado a Dinamarca por el " +
+                "puente de Öresund. Su ciudad más poblada es Estocolmo, que es también su capital.", R.drawable.se, "Sueco", 450295, "Stockholm"));
+        this.data.add(new Country("Finlandia","Finlandia, oficialmente República de Finlandia, es un país miembro de la Unión Europea desde 1995 " +
+                "y situado en el noreste de Europa. Tiene fronteras al oeste con Suecia, al este con Rusia y al norte con Noruega. Por el oeste y " +
+                "el sur está rodeada por el mar Báltico, que la separa de Suecia y Estonia, cruzando los golfos de Botnia y Finlandia, respectivamente. " +
+                "La capital y ciudad más importante del país es Helsinki.", R.drawable.fi, "Finlandes", 338145, "Helsinsky"));
+        this.data.add(new Country("China","La República Popular China, o simplemente China, es un Estado soberano situado en " +
+                "Asia Oriental. Es el país más poblado del mundo, con más de 1300 millones de habitantes, y la primera potencia económica mundial " +
+                "por PIB, en términos de paridad de poder adquisitivo. La República Popular China es un Estado unipartidista gobernado por el Partido " +
+                "Comunista y tiene la sede de su gobierno en la capital, Pekín. Está dividida en veintidós provincias, cinco regiones autónomas, cuatro " +
+                "municipios bajo jurisdicción central —Pekín, Tianjin, Shanghái y Chongqing— y dos regiones administrativas especiales —Hong Kong y Macao—. " +
+                "Asimismo, China reclama la que considera provincia de Taiwán, que es controlada por la República de China con un estatus político " +
+                "de la isla controvertido.", R.drawable.cn, "Chino", 9596960, "Beijing"));
+        this.data.add(new Country("Panamá","Panamá es un país ubicado en el sureste de América Central. Su nombre oficial es " +
+                "República de Panamá y su capital es la ciudad de Panamá.Limita al Norte con el mar Caribe, al Sur con el océano " +
+                "Pacífico, al Este con Colombia y al Oeste con Costa Rica. Tiene una extensión de 75 420 km². Localizado en el istmo " +
+                "de Panamá istmo que une a América del Sur con América Central, su territorio montañoso solamente es interrumpido por el canal de Panamá. " +
+                "Su población es de 4 002 360. El 1º de enero de 2014 se crea la provincia de Panamá Oeste, así estando constituida " +
+                "por 10 provincias y por cinco comarcas indígenas. Antes del 31 de diciembre de 2013 estaba " +
+                "constituida por nueve provincias", R.drawable.pa, "Español", 357022, "Panamá"));
     }
 
     public static CountryRepo getInstance() {

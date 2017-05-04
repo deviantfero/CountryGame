@@ -11,6 +11,7 @@ public class Country {
     private String capital;
     private int flagId;
     private String language;
+    private double kilometers;
 
     public String getCapital() {
         return capital;
@@ -20,9 +21,8 @@ public class Country {
         this.capital = capital;
     }
 
-    private double kilometers;
 
-    public Country(String n, String d, int f, String l, int km, String ca) {
+    public Country(String n, String d, int f, String l, double km, String ca) {
         this.name = n;
         this.description = d;
         this.flagId = f;
