@@ -50,11 +50,13 @@ public class DetailsFragment extends Fragment {
 
         this.getActivity().setTitle(selectedCountry.getName());
         ImageView countryFlag = (ImageView) this.getActivity().findViewById(R.id.detailFlag);
+        TextView countryCapi = (TextView) this.getActivity().findViewById(R.id.detailCapital);
         TextView countryDesc = (TextView) this.getActivity().findViewById(R.id.detailDescription);
         TextView countryLang = (TextView) this.getActivity().findViewById(R.id.detailLanguage);
         TextView countrySize = (TextView) this.getActivity().findViewById(R.id.detailSize);
 
         countryFlag.setImageResource(selectedCountry.getFlagId());
+        countryCapi.setText(selectedCountry.getCapital());
         countryDesc.setText(selectedCountry.getDescription());
         countryLang.setText(selectedCountry.getLanguage());
         countrySize.setText("" + selectedCountry.getKilometers());
