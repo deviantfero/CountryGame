@@ -8,16 +8,27 @@ public class Country {
 
     private String name;
     private String description;
+    private String capital;
     private int flagId;
     private String language;
+
+    public String getCapital() {
+        return capital;
+    }
+
+    public void setCapital(String capital) {
+        this.capital = capital;
+    }
+
     private double kilometers;
 
-    public Country(String n, String d, int f, String l, int km) {
+    public Country(String n, String d, int f, String l, int km, String ca) {
         this.name = n;
         this.description = d;
         this.flagId = f;
         this.language = l;
         this.kilometers = km;
+        this.capital = ca;
     }
 
     public Country(String n, String d, String l, int km) {

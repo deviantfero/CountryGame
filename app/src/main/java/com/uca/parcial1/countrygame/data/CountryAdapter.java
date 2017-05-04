@@ -1,6 +1,7 @@
 package com.uca.parcial1.countrygame.data;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.os.Bundle;
@@ -42,7 +43,7 @@ public class CountryAdapter extends ArrayAdapter<Country> {
 
             if(countryFlag != null && countryName != null) {
                 countryName.setText(itemCountry.getName());
-                countryFlag.setImageDrawable(v.getResources().getDrawable(itemCountry.getFlagId(), null));
+                countryFlag.setImageDrawable(ContextCompat.getDrawable(this.getContext(), itemCountry.getFlagId()));
             }
         }
         return v;

@@ -16,9 +16,15 @@ public class LearnActivty extends AppCompatActivity
             if(savedInstanceState != null)
                 return;
 
-            CountryFragment countryListFragment = new CountryFragment();
-            this.getSupportFragmentManager().beginTransaction()
-                    .add(R.id.learnFragmentContainer, countryListFragment).commit();
+            DetailsFragment countryDetail = (DetailsFragment)this.getSupportFragmentManager()
+                    .findFragmentById(R.id.detailFragment);
+            if(countryDetail == null) {
+                CountryFragment countryListFragment = new CountryFragment();
+                this.getSupportFragmentManager().beginTransaction()
+                        .add(R.id.learnFragmentContainer, countryListFragment).commit();
+            } else {
+                countryDetail.setFocus(0);
+            }
         }
     }
 
