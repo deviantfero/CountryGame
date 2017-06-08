@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight="4">
+        android:layout_weight="6">
 
         <ImageView
             android:id="@+id/questionFlagImageView"
@@ -42,7 +42,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textSize="16sp"
-                android:layout_marginTop="4dp"
                 android:layout_weight="1"
                 android:onClick="answerSelected"/>
 
@@ -51,7 +50,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textSize="16sp"
-                android:layout_marginTop="4dp"
                 android:layout_weight="1"
                 android:onClick="answerSelected"/>
 
@@ -60,7 +58,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textSize="16sp"
-                android:layout_marginTop="4dp"
                 android:layout_weight="1"
                 android:onClick="answerSelected"/>
 
@@ -69,8 +66,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textSize="16sp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
                 android:layout_weight="1"
                 android:onClick="answerSelected"/>
 
