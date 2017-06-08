@@ -55,7 +55,7 @@ public class DetailsFragment extends Fragment {
         TextView countryLang = (TextView) this.getActivity().findViewById(R.id.detailLanguage);
         TextView countrySize = (TextView) this.getActivity().findViewById(R.id.detailSize);
 
-        countryFlag.setImageResource(selectedCountry.getFlagId());
+        //countryFlag.setImageResource(selectedCountry.getFlagId());
         countryCapi.setText(selectedCountry.getCapital());
         countryDesc.setText(selectedCountry.getDescription());
         countryLang.setText(selectedCountry.getLanguage());

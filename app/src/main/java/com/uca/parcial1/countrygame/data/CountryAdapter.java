@@ -43,7 +43,7 @@ public class CountryAdapter extends ArrayAdapter<Country> {
 
             if(countryFlag != null && countryName != null) {
                 countryName.setText(itemCountry.getName());
-                countryFlag.setImageDrawable(ContextCompat.getDrawable(this.getContext(), itemCountry.getFlagId()));
+                //countryFlag.setImageDrawable(ContextCompat.getDrawable(this.getContext(), itemCountry.getFlagId()));
             }
         }
         return v;

@@ -73,7 +73,7 @@ public class GameActivity extends AppCompatActivity {
             buttons.add(auxiliarCountries.get(i));
         }
 
-        flag.setImageResource(questionCountries.get(0).getFlagId());
+        //flag.setImageResource(questionCountries.get(0).getFlagId());
 
         Collections.shuffle(buttons);
 

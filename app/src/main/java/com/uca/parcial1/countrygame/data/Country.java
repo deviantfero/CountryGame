@@ -5,11 +5,11 @@ package com.uca.parcial1.countrygame.data;
  */
 
 public class Country {
-
+    private int _id;
     private String name;
     private String description;
     private String capital;
-    private int flagId;
+    private String flagId;
     private String language;
     private double kilometers;
 
@@ -17,12 +17,21 @@ public class Country {
         return capital;
     }
 
+    public int get_id() {
+        return _id;
+    }
+
+    public void set_id(int _id) {
+        this._id = _id;
+    }
+
     public void setCapital(String capital) {
         this.capital = capital;
     }
 
+    public Country(){ }
 
-    public Country(String n, String d, int f, String l, double km, String ca) {
+    public Country(String n, String d, String f, String l, double km, String ca) {
         this.name = n;
         this.description = d;
         this.flagId = f;
@@ -62,11 +71,11 @@ public class Country {
         this.description = description;
     }
 
-    public int getFlagId() {
+    public String getFlagId() {
         return flagId;
     }
 
-    public void setFlagId(int flagId) {
+    public void setFlagId(String flagId) {
         this.flagId = flagId;
     }
 
